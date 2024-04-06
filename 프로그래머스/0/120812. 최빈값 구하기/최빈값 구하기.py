@@ -3,13 +3,12 @@ def solution(array):
     ls =[]
     m = 0
     cnt=[]
-    for i in array:
+    for i in array: #중복값 제거한 리스트 만들기
         if i in ls :
-            print("있는 숫자",i)
+            print("존재하는 숫자",i)
         else:
             ls.append(i)
-    print(ls)
-    for j in ls:
+    for j in ls: #최빈값 구하기
         cnt.append(array.count(j)) 
         if array.count(j) > m:
             m = array.count(j)
